@@ -66,7 +66,7 @@ quote-generator/
 ## Installation et Execution
 
 ``` bash
-git clone <repo_url>
+git clone <https://github.com/Rocky1324/quote-generator>
 cd quote-generator
 pip install flask werkzeug
 python app.py
@@ -105,7 +105,9 @@ python app.py
 ## License
 
 Projet realise dans un but pedagogique
+
 **License**: MIT
+
 
 
 
