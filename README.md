@@ -86,7 +86,8 @@ python app.py
 
 ![Interface](static/image_1.png)
 
-<video controls src="static/Enregistrement 2025-08-20 113426.mp4" title="Exemple d'utilisation"></video>
+![Telechargez la vidéo de démonstration](https://drive.google.com/file/d/19Lm_wlHQ1ROa_GiBpXfyEP8dRZ0IZEYA/view?usp=sharing)
+
 ---
 
 ## Amelioration futures
@@ -107,6 +108,7 @@ python app.py
 Projet realise dans un but pedagogique
 
 **License**: MIT
+
 
 
 
