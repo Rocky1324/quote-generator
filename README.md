@@ -87,7 +87,7 @@ python app.py
 ![Interface](static/image_1.png)
 
 
-![Telechargez la vidéo de démonstration](https://drive.google.com/file/d/19Lm_wlHQ1ROa_GiBpXfyEP8dRZ0IZEYA/view?usp=sharing)
+[Telechargez la vidéo de démonstration](https://drive.google.com/file/d/19Lm_wlHQ1ROa_GiBpXfyEP8dRZ0IZEYA/view?usp=sharing)
 
 ---
 
@@ -109,6 +109,7 @@ python app.py
 Projet realise dans un but pedagogique
 
 **License**: MIT
+
 
 
 
