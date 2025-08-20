@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+
+{% block body %}
+<h2>Mes favoris</h2>
+{% for fav in favorit %}
+<div class="quote-card">
+    
+    <p id="quote">{{ fav.Quote }}</p>
+    <p id="author">{{ fav.Author }}</p>
+
+    <form action="delete/{{ fav.id }}" method="post">
+        <button type="submit">Delete</button>
+    </form>
+    <button onclick="copy(this)" data-quote="{{ fav.Quote }}" data-author="{{ fav.Author }}">Copier</button>
+    <button onclick="share(this)" data-quote="{{ fav.Quote }}" data-author="{{ fav.Author }}">Partager</button>
+</div>
+<script>
+    // Copier
+    function copy(button) {
+        const quote = button.dataset.quote;
+        const author = button.dataset.author;
+        const Fulltext = `${author} : ${quote}`;
+
+        navigator.clipboard.writeText(Fulltext)
+        .then(() => alert("Copie!"))
+        .catch(err => console.error("Copiage echoue:", err));
+    }
+     // Partager
+    function share(button) {
+        const quote = button.dataset.quote;
+        const author = button.dataset.author;
+        const FullText = `${author}: ${quote}`;
+
+        if (navigator.share) {
+            navigator.share({
+                title : "Mes favorits",
+                text : FullText,
+            })
+            .then(() => console.log("Partage avec succes"))
+            .catch(err => console.error("Echec du partage:", err));
+        } else {
+            alert("Le parage n'est pas supporte sur ce navigateur");
+        }
+    }
+</script>
+{% endfor %}
+
+{% endblock %}

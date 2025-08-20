@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block body %}
+<h1>Inscrivez vous</h1>
+
+<form method = "post">
+    <input autocomplete = "off" autofocus placeholder = "username" name = "username" type = "text" required>
+    <input autocomplete = "off" placeholder = "password" name = "password" type = "password" required>
+    <button type = "submit">Inscris toi</button>
+</form>
+<p>Vous etes deja connecte?</p>
+<a href = "/login">Connectez vous</a>
+
+
+{% endblock %}

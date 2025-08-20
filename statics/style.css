@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #090446; /* dark blue */
+    color: #37FF8B; /* bright green text for contrast */
+}
+
+header {
+    background-color: #C1292E; /* red */
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #FFEEDD;
+}
+
+.welcome {
+    background-color: #7E8287; /* gray */
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: white;
+}
+
+a.btn {
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background-color: #BF3100; /* orange */
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #C1292E; /* red on hover */
+}
+
+a.btn.secondary {
+    background-color: transparent;
+    border: 2px solid #BF3100;
+    color: #BF3100;
+}
+
+a.btn.secondary:hover {
+    background-color: #BF3100;
+    color: white;
+}

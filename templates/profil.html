@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block body %}
+{% if username == none %}
+<a href = "/login">Connectez vous</a>
+{% else %}
+<h2>Bienvenue sur ton profil {{username}}</h2>
+<p>Decouvre les differentes <a href = "/categorie">citations</a> maintenant</p>
+<a href = "/favorite">Mes favorits</a> 
+<br>
+<a href = "/logout">se deconnecter</a>
+{% with messages = get_flashed_messages(with_categories = true ) %}
+    {% if messages %}
+        {% for categorie, message in messages%}
+            <p class = "flash-messages {{categorie}}">{{messsage}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Quotes Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% block body %}
+    <header>
+        <h1 class = "hero">Random Quotes Generator</h1>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <p>Bienvenue sur mon application de génération de citation.</p>
+            <p class="subtitle">Pour vous permettre de trouver votre inspiration de la journée.</p>
+            <p>Tout d'abord, vous devez vous inscrire :</p>
+            <a href="/regist" class="btn">Inscrivez-vous</a>
+            <p>Vous avez déjà un compte ?</p>
+            <a href="/login" class="btn secondary">Connectez-vous</a>
+        </section>
+    </main>
+    {% endblock %}
+</body>
+</html>

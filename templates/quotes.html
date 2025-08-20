@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+
+{% block body %}
+<h2>Trouver votre inpiration du jour</h2>
+<ul>
+    <li id = "Quote" data-quote = "{{ selected.Quote }}">{{ selected.Quote }}</li>
+    <li id = "Author" data-author = "{{ selected.Authors }}"><i>{{selected.Authors}}</i></li>
+</ul>
+<form action = "/favorite/{{selected.id}}" method = "post">
+    <button type = "submit">Ajouter aux favorits</button>
+</form>
+<button onclick = "copytext()" name = "copy" id = "copy" value = "{{selected.Authors}}: {{selected.Quote}}">Copier</button>
+<button onclick = "shareQuote()" name="share" id="share" value="{{ selected.Authors }}: {{ selected.Quote }}">Partager</button>
+<br>
+<a href = "/favorite" target = "_blank">Mes favorits</a>
+<a href = "/profil">Ton profil</a>
+{% with messages = get_flashed_messages(with_categories = true ) %}
+    {% if messages %}
+        {% for categorie, message in messages%}
+            <p class = "flash-messages {{categorie}}">{{messsage}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<script>
+    function copytext() {
+        const quote = document.getElementById("Quote").dataset.quote;
+        const author = document.getElementById("Author").dataset.author;
+        const fullText = `${author} : ${quote}`;
+        navigator.clipboard.writeText(fullText)
+        .then(() => alert("Copie"))
+        .catch(err => console.error("Echec de la copie:", err));
+    }
+
+    function shareQuote() {
+        const quote = document.getElementById("Quote").dataset.quote;
+        const author = document.getElementById("Author").dataset.author;
+        const Fulltext = `${author} : ${quote}`;
+
+        if (navigator.share) {
+            navigator.share({
+                title : "Inspiration du jour",
+                text : Fulltext,
+            })
+            .then(() => console.log("Partage avec succes"))
+            .catch (err => conssole.error("Echec du partege", err));
+        } else {
+            alert("Le partage n'est pas supporte sur ce navigateur");
+        }
+    }
+</script>
+{% endblock %}

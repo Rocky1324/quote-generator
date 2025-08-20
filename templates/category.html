@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block body %}
+<form action = "/quotes" method = "post">
+    <label for = "category-select">Choisissez une categorie:</label>
+    <select name = "category" id="category-select" required>
+        <option value = "Choisissez" disabled selected>Choisissez</option>
+        {% for categorie in category %}
+        <option value = {{categorie.name}}>{{categorie.name}}</option>
+        {% endfor %}
+    </select>
+    
+        <button type = "submit">Envoyer</button>
+</form>
+
+{% endblock %}
