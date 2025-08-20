@@ -1,0 +1,17 @@
+# Fichiers Python
+*.pyc
+__pycache__/
+
+# Bases de données locales
+*.db
+
+# Environnements virtuels
+venv/
+.env
+statics/
+static/Enregistrement 2025-08-20 113426.mp4
+static/video_compressed.mp4
+
+# Fichiers systèmes
+.DS_Store
+Thumbs.db
