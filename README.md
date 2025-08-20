@@ -8,6 +8,7 @@ Elle permet aux utilisateurs de s’inscrire, de se connecter, de parcourir les 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)  
 ![Flask](https://img.shields.io/badge/Flask-2.3-green)  
 ![SQLite](https://img.shields.io/badge/SQLite-Database-lightgrey)
+![Languages](https://img.shields.io/github/languages/count/Rocky1324/quote-generator)
 
 **Objectif pédagogique** : Apprendre l’authentification, la gestion des bases de données et l’utilisation des templates Flask (Jinja2).
 
@@ -109,6 +110,7 @@ python app.py
 Projet realise dans un but pedagogique
 
 **License**: MIT
+
 
 
 
